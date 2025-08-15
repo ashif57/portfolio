@@ -1,0 +1,473 @@
+
+/* Global styles for space/nebula theme */
+:root {
+    --dark-bg: #070815;
+    --neon-violet: #8A2BE2;
+    --neon-cyan: #00FFFF;
+    --text-light: #E0E0E0;
+    --text-dark: #1A1A1A;
+    --off-white: #F7F7F7;
+
+    --light-bg: #F4F4F9;
+    --light-text: #1A1A1A;
+    --light-primary: #2D2A32;
+    --light-accent: #8AC6D1;
+
+    --light-neon-violet: rgba(138, 43, 226, 0.5);
+    --light-neon-cyan: rgba(0, 255, 255, 0.5);
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    font-family: 'Inter', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    /* user-select: none; */
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+body.light-theme {
+    background-color: var(--light-bg);
+    color: var(--light-text);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Urbanist', sans-serif; /* Or Poppins, as in original */
+    color: var(--text-light);
+}
+
+.light-theme .font-urbanist,
+.light-theme .nav-link,
+.light-theme #theme-toggle,
+.light-theme #menu-toggle {
+    color: var(--light-text) !important;
+}
+
+body.light-theme .text-text-light,
+body.light-theme .text-white {
+    color: var(--light-text) !important;
+}
+
+body.light-theme h1,
+body.light-theme h2,
+body.light-theme h3,
+body.light-theme h4,
+body.light-theme h5,
+body.light-theme h6 {
+    color: var(--light-text);
+}
+
+body.light-theme .nav-link {
+    color: var(--light-text);
+}
+
+body.light-theme .nav-link:hover {
+    color: var(--light-accent);
+}
+
+body.light-theme #navbar.bg-dark-bg {
+    background-color: rgba(244, 244, 249, 0.8) !important;
+}
+
+/* Existing styles from index.html to be adapted */
+.card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.btn-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link:hover {
+    color: var(--neon-cyan); /* Using new accent color */
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+    color: var(--neon-cyan); /* Using new accent color */
+}
+
+.project-card:hover .project-links {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project-links {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+/* Starfield background */
+.starfield {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    overflow: hidden;
+    z-index: 0;
+    transition: opacity 0.3s ease;
+}
+
+body.light-theme .starfield {
+    opacity: 1;
+}
+
+body.light-theme .star {
+    background: black;
+}
+
+.star {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    opacity: 0;
+    animation: twinkle linear infinite;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0; transform: scale(0.5); }
+    50% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0; transform: scale(0.5); }
+}
+
+/* Gradient text */
+.gradient-text {
+    background: linear-gradient(90deg, var(--neon-violet), var(--neon-cyan));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Subtle text shadow for depth */
+}
+
+/* Glassmorphism card */
+.glassmorphism-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transform: perspective(1000px) rotateX(0deg); /* Initial perspective */
+    transition: transform 0.4s ease-out, box-shadow 0.4s ease-out, background-color 0.3s ease;
+}
+
+body.light-theme .glassmorphism-card {
+    background: rgba(255, 255, 255, 0.4); /* More transparent */
+    backdrop-filter: blur(20px); /* More blur */
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Lighter border */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1); /* Softer shadow */
+}
+
+.glassmorphism-card:hover {
+    transform: perspective(1000px) rotateX(2deg) translateY(-5px); /* Subtle lift and tilt */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2), 0 0 15px var(--neon-cyan); /* Softer glow */
+}
+
+/* Glowing border */
+.glow-border {
+    position: relative;
+    border-radius: 50%; /* Ensure it's circular */
+    padding: 2px; /* Adjust padding as needed for glow effect */
+    background: linear-gradient(45deg, var(--neon-violet), var(--neon-cyan));
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 5px var(--neon-violet), 0 0 10px var(--neon-cyan), 0 0 15px var(--neon-violet);
+    }
+    to {
+        box-shadow: 0 0 10px var(--neon-cyan), 0 0 20px var(--neon-violet), 0 0 30px var(--neon-cyan);
+    }
+}
+
+body.light-theme .glow-border {
+    background: linear-gradient(45deg, var(--light-neon-violet), var(--light-neon-cyan));
+    animation: light-glow 2s infinite alternate;
+}
+
+@keyframes light-glow {
+    from {
+        box-shadow: 0 0 5px var(--light-neon-violet), 0 0 10px var(--light-neon-cyan), 0 0 15px var(--light-neon-violet);
+    }
+    to {
+        box-shadow: 0 0 10px var(--light-neon-cyan), 0 0 20px var(--light-neon-violet), 0 0 30px var(--light-neon-cyan);
+    }
+}
+
+
+/* Project card tilt and glow */
+.project-card {
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+.project-card:hover {
+    transform: perspective(1000px) rotateX(5deg) rotateY(5deg) translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2), 0 0 20px var(--neon-cyan);
+}
+
+body.light-theme .project-card i {
+    color: var(--light-accent);
+}
+
+/* Base button styles */
+.btn-primary, .btn-secondary {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    line-height: 1.5;
+}
+
+/* Dark Theme Button Styles */
+.btn-primary {
+    background-color: var(--text-dark);
+    color: #FFFFFF;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5), 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px var(--neon-cyan), 0 0 30px var(--neon-cyan);
+}
+
+.btn-secondary {
+    background-color: var(--off-white);
+    color: var(--text-dark);
+    box-shadow: 0 0 10px rgba(138, 43, 226, 0.5), 0 0 20px rgba(138, 43, 226, 0.3);
+}
+
+.btn-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px var(--neon-violet), 0 0 30px var(--neon-violet);
+}
+
+/* Light Theme Button Styles */
+body.light-theme .btn-primary {
+    background-color: var(--off-white);
+    color: var(--text-dark);
+    box-shadow: 0 0 10px rgba(138, 43, 226, 0.5), 0 0 20px rgba(138, 43, 226, 0.3);
+}
+
+body.light-theme .btn-primary:hover {
+    box-shadow: 0 0 15px var(--light-neon-violet), 0 0 30px var(--light-neon-violet);
+}
+
+body.light-theme .btn-secondary {
+    background-color: var(--text-dark);
+    color: #FFFFFF;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5), 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+body.light-theme .btn-secondary:hover {
+    box-shadow: 0 0 15px var(--light-neon-cyan), 0 0 30px var(--light-neon-cyan);
+}
+
+.btn-primary:active, .btn-secondary:active {
+    transform: scale(0.98);
+    box-shadow: none;
+}
+
+/* Navbar active link gradient underline */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background: linear-gradient(90deg, var(--neon-violet), var(--neon-cyan));
+    transition: width 0.3s ease-out;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* Reduced motion fallback */
+@media (prefers-reduced-motion: reduce) {
+    .star,
+    .magnetic-btn,
+    .project-card,
+    .btn-hover,
+    .social-icon,
+    .nav-link {
+        animation: none !important;
+        transition: none !important;
+        transform: none !important;
+    }
+    .starfield {
+        display: none;
+    }
+}
+/* Smooth scroll-reveal animations */
+.fade-in-hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-up {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Frameworks Section */
+.framework-orbit {
+    position: relative;
+    width: 400px;
+    height: 200px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: rotate-orbit 30s linear infinite;
+    transform-style: preserve-3d;
+}
+
+.light-theme .framework-orbit,
+.light-theme .framework-orbit::before,
+.light-theme .framework-orbit::after {
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+.framework-orbit::before {
+    content: '';
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    border-radius: 50%;
+    border: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+.framework-orbit::after {
+    content: '';
+    position: absolute;
+    width: 40%;
+    height: 40%;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.framework-icon {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: var(--neon-cyan);
+    transform: rotate(calc(360deg / 12 * var(--i))) translateX(200px) rotate(calc(-360deg / 12 * var(--i)));
+    animation: float 5s ease-in-out infinite;
+    animation-delay: calc(var(--i) * 0.5s);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    transform-style: preserve-3d;
+}
+
+.framework-center-icon {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: rgba(138, 43, 226, 0.2);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    color: var(--neon-violet);
+    box-shadow: 0 0 15px rgba(138, 43, 226, 0.7);
+    border: 1px solid rgba(138, 43, 226, 0.5);
+    z-index: 10;
+}
+
+@keyframes rotate-orbit {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: rotate(calc(360deg / 12 * var(--i))) translateX(200px) rotate(calc(-360deg / 12 * var(--i))) translateY(0px);
+    }
+    50% {
+        transform: rotate(calc(360deg / 12 * var(--i))) translateX(200px) rotate(calc(-360deg / 12 * var(--i))) translateY(-15px);
+    }
+}
+
+body.light-theme .framework-icon {
+    background: rgba(0, 0, 0, 0.05);
+    color: var(--light-primary);
+    box-shadow: 0 0 15px var(--light-neon-cyan);
+    border: 1px solid var(--light-neon-cyan);
+}
+
+body.light-theme .framework-center-icon {
+    background: rgba(45, 42, 50, 0.2);
+    color: var(--light-primary);
+    box-shadow: 0 0 15px rgba(45, 42, 50, 0.2);
+    border: 1px solid rgba(45, 42, 50, 0.2);
+}
+
+body.light-theme .gradient-text {
+    background: linear-gradient(90deg, var(--light-primary), var(--light-accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    text-shadow: none;
+}
+
+
+body.light-theme footer {
+    background-color: var(--light-bg);
+    color: var(--light-text);
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+body.light-theme .social-icon {
+    color: var(--light-text);
+}
+
+body.light-theme .social-icon:hover {
+    color: var(--light-accent);
+}
+
+body.light-theme .text-neon-cyan {
+    color: var(--light-accent);
+}
+
+body.light-theme input,
+body.light-theme textarea {
+    background-color: rgba(0, 0, 0, 0.05) !important;
+    border-color: rgba(0, 0, 0, 0.1) !important;
+    color: var(--light-text) !important;
+}
+
+body.light-theme input::placeholder,
+body.light-theme textarea::placeholder {
+    color: rgba(0, 0, 0, 0.4) !important;
+}
