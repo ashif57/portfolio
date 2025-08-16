@@ -11,7 +11,7 @@ This is a visually stunning portfolio website built with HTML, CSS, and JavaScri
 -   **📌-   **📌 Intro section with name, title, bio, and CTA buttons
 -   **🎓 Certifications & Courses section
 -   **🏢 Experience Section:** A dedicated section to showcase professional experience.
--   **🛠️ Projects section with GitHub links
+-   **🛠️ Dynamic Projects Section:** Fetches and displays GitHub repositories dynamically in a responsive Swiper.js carousel with 3D glowing cards, autoplay, and manual navigation (swipe/arrow/dots). Projects are displayed as showcase cards with title, description, language, and stars.
 -   **📬 Contact form with name, email, and message input
 -   **🔗 Social links (GitHub, LinkedIn, Email)
 -   **🌐 Responsive and mobile-friendly design

@@ -1,4 +1,5 @@
 
+
 /* Global styles for space/nebula theme */
 :root {
     --dark-bg: #070815;
@@ -23,8 +24,8 @@ body {
     font-family: 'Inter', sans-serif;
     transition: background-color 0.3s ease, color 0.3s ease;
     /* user-select: none; */
-    display: grid;
-    grid-template-rows: auto 1fr auto;
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
 }
 
@@ -91,14 +92,8 @@ body.light-theme #navbar.bg-dark-bg {
     color: var(--neon-cyan); /* Using new accent color */
 }
 
-.project-card:hover .project-links {
-    opacity: 1;
-    transform: translateY(0);
-}
-
 .project-links {
-    opacity: 0;
-    transform: translateY(10px);
+    /* No opacity or transform needed as links are always visible */
     transition: all 0.3s ease;
 }
 /* Starfield background */
@@ -154,7 +149,7 @@ body.light-theme .star {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    transform: perspective(1000px) rotateX(0deg); /* Initial perspective */
+    transform: rotateX(0deg); /* Initial perspective */
     transition: transform 0.4s ease-out, box-shadow 0.4s ease-out, background-color 0.3s ease;
 }
 
@@ -206,13 +201,13 @@ body.light-theme .glow-border {
 
 /* Project card tilt and glow */
 .project-card {
-    transform-style: preserve-3d;
     transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
 }
 
 .project-card:hover {
-    transform: perspective(1000px) rotateX(5deg) rotateY(5deg) translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2), 0 0 20px var(--neon-cyan);
+    transform: translateY(-10px) scale(1.02); /* Pop up and slightly scale */
+    box-shadow: 0 0 30px 10px rgba(0, 255, 255, 0.6), 0 15px 30px rgba(0, 0, 0, 0.2); /* Stronger, diffused glow */
+    z-index: 20; /* Bring to front on hover */
 }
 
 body.light-theme .project-card i {
@@ -325,8 +320,88 @@ body.light-theme .btn-secondary:hover {
 
 .fade-in-up {
     opacity: 1;
-    transform: translateY(0);
+    transform: none;
 }
+/* Projects Carousel (Swiper.js) */
+.swiper {
+    width: 100%;
+    padding: 50px 0 50px; /* Increased top padding for pop-up */
+    overflow: hidden; /* Allow content to overflow */
+}
+
+.swiper-wrapper {
+    overflow: visible;
+}
+
+.swiper-slide {
+    width: 300px; /* Adjust as needed for card size */
+    height: 400px; /* Fixed height for the slide */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    overflow: visible !important; /* Ensure content can overflow */
+    position: relative; /* Allow z-index to work */
+}
+
+.swiper-slide:hover {
+    z-index: 30; /* Bring hovered slide to the front */
+}
+
+.swiper-slide-shadow-left,
+.swiper-slide-shadow-right {
+    background-image: none !important; /* Remove default shadows */
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--neon-cyan);
+    opacity: 0.7;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    filter: drop-shadow(0 0 5px var(--neon-cyan)); /* Add glow */
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    opacity: 1;
+    transform: scale(1.2); /* More pronounced scale */
+    filter: drop-shadow(0 0 8px var(--neon-cyan)); /* More glow on hover */
+}
+
+body.light-theme .swiper-button-next,
+body.light-theme .swiper-button-prev {
+    color: var(--light-accent);
+    filter: drop-shadow(0 0 5px var(--light-accent));
+}
+
+body.light-theme .swiper-button-next:hover,
+body.light-theme .swiper-button-prev:hover {
+    filter: drop-shadow(0 0 8px var(--light-accent));
+}
+
+.swiper-pagination-bullet {
+    background: var(--neon-violet);
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--neon-cyan);
+    opacity: 1;
+    transform: scale(1.2);
+    box-shadow: 0 0 5px var(--neon-cyan);
+}
+
+body.light-theme .swiper-pagination-bullet {
+    background: var(--light-primary);
+}
+
+body.light-theme .swiper-pagination-bullet-active {
+    background: var(--light-accent);
+    box-shadow: 0 0 5px var(--light-accent);
+}
+
 /* Frameworks Section */
 .framework-orbit {
     position: relative;
@@ -367,21 +442,28 @@ body.light-theme .btn-secondary:hover {
 
 .framework-icon {
     position: absolute;
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 50%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     font-size: 2rem;
     color: var(--neon-cyan);
-    transform: rotate(calc(360deg / 12 * var(--i))) translateX(200px) rotate(calc(-360deg / 12 * var(--i)));
+    transform: rotate(calc(360deg / 13 * var(--i))) translateX(200px) rotate(calc(-360deg / 13 * var(--i)));
     animation: float 5s ease-in-out infinite;
     animation-delay: calc(var(--i) * 0.5s);
     box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
     border: 1px solid rgba(0, 255, 255, 0.2);
     transform-style: preserve-3d;
+}
+
+.framework-icon span {
+    font-size: 0.8rem;
+    margin-top: 5px;
+    color: var(--text-light);
 }
 
 .framework-center-icon {
@@ -411,10 +493,10 @@ body.light-theme .btn-secondary:hover {
 
 @keyframes float {
     0%, 100% {
-        transform: rotate(calc(360deg / 12 * var(--i))) translateX(200px) rotate(calc(-360deg / 12 * var(--i))) translateY(0px);
+        transform: rotate(calc(360deg / 13 * var(--i))) translateX(200px) rotate(calc(-360deg / 13 * var(--i))) translateY(0px);
     }
     50% {
-        transform: rotate(calc(360deg / 12 * var(--i))) translateX(200px) rotate(calc(-360deg / 12 * var(--i))) translateY(-15px);
+        transform: rotate(calc(360deg / 13 * var(--i))) translateX(200px) rotate(calc(-360deg / 13 * var(--i))) translateY(-15px);
     }
 }
 
@@ -470,4 +552,15 @@ body.light-theme textarea {
 body.light-theme input::placeholder,
 body.light-theme textarea::placeholder {
     color: rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Override animation for projects section to fix pop-up clipping */
+#projects.fade-in-hidden,
+#projects.fade-in-up {
+    opacity: 1;
+    transform: none;
+}
+
+#projects {
+    overflow: visible !important;
 }

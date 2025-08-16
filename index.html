@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     <link rel="stylesheet" href="style.css">
-    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body class="flex flex-col min-h-screen">
         <div class="starfield"></div>
@@ -138,18 +138,19 @@
         <h2 class="text-3xl font-bold text-center mb-12 gradient-text">Frameworks and Tech Stacks familiar with</h2>
         <div class="relative flex justify-center items-center h-96">
           <div class="framework-orbit">
-            <div class="framework-icon" style="--i:0;"><i class="devicon-react-original"></i></div>
-            <div class="framework-icon" style="--i:1;"><i class="devicon-django-plain"></i></div>
-            <div class="framework-icon" style="--i:2;"><i class="devicon-fastapi-plain"></i></div>
-            <div class="framework-icon" style="--i:3;"><i class="devicon-flask-original"></i></div>
-            <div class="framework-icon" style="--i:4;"><i class="devicon-nextjs-original"></i></div>
-            <div class="framework-icon" style="--i:5;"><i class="devicon-postgresql-plain"></i></div>
-            <div class="framework-icon" style="--i:6;"><i class="devicon-html5-plain"></i></div>
-            <div class="framework-icon" style="--i:7;"><i class="devicon-css3-plain"></i></div>
-            <div class="framework-icon" style="--i:8;"><i class="devicon-tailwindcss-plain"></i></div>
-            <div class="framework-icon" style="--i:9;"><i class="devicon-github-original"></i></div>
-            <div class="framework-icon" style="--i:10;"><i class="devicon-mongodb-plain"></i></div>
-            <div class="framework-icon" style="--i:11;"><i class="devicon-python-plain"></i></div>
+            <div class="framework-icon" style="--i:0;"><i class="devicon-react-original"></i><span>React</span></div>
+            <div class="framework-icon" style="--i:1;"><i class="devicon-django-plain"></i><span>Django</span></div>
+            <div class="framework-icon" style="--i:2;"><i class="devicon-fastapi-plain"></i><span>FastAPI</span></div>
+            <div class="framework-icon" style="--i:3;"><i class="devicon-flask-original"></i><span>Flask</span></div>
+            <div class="framework-icon" style="--i:4;"><i class="devicon-nextjs-original"></i><span>Next.js</span></div>
+            <div class="framework-icon" style="--i:5;"><i class="devicon-postgresql-plain"></i><span>PostgreSQL</span></div>
+            <div class="framework-icon" style="--i:6;"><i class="devicon-html5-plain"></i><span>HTML5</span></div>
+            <div class="framework-icon" style="--i:7;"><i class="devicon-css3-plain"></i><span>CSS3</span></div>
+            <div class="framework-icon" style="--i:8;"><i class="devicon-tailwindcss-plain"></i><span>Tailwind</span></div>
+            <div class="framework-icon" style="--i:9;"><i class="devicon-github-original"></i><span>GitHub</span></div>
+            <div class="framework-icon" style="--i:10;"><i class="devicon-mongodb-plain"></i><span>MongoDB</span></div>
+            <div class="framework-icon" style="--i:11;"><i class="devicon-python-plain"></i><span>Python</span></div>
+            <div class="framework-icon" style="--i:12;"><i class="devicon-vuejs-plain"></i><span>Vue.js</span></div>
           </div>
           <div class="framework-center-icon">
             <i class="devicon-devicon-plain"></i>
@@ -248,57 +249,14 @@
   <div class="container mx-auto">
     <h2 class="text-3xl font-bold text-center mb-12 gradient-text">Featured Projects</h2>
     
-    <!-- Grid Wrapper (IMPORTANT) -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-      <!-- Project: Dynamic Pricing Model -->
-      <div class="glassmorphism-card project-card rounded-xl overflow-hidden relative">
-        <div class="h-48 bg-gray-800 flex items-center justify-center">
-          <i class="fas fa-chart-line text-6xl text-neon-cyan"></i>
+    <!-- Carousel Wrapper -->
+    <div class="swiper mySwiper" id="projects-container">
+        <div class="swiper-wrapper">
+            <!-- Projects will be dynamically inserted here -->
         </div>
-        <div class="p-6">
-          <h3 class="text-xl font-bold mb-2">Dynamic Pricing Model</h3>
-          <p class="text-text-light mb-4">Used XGBoost and Python to adjust hotel pricing in real-time based on availability and events.</p>
-          <div class="project-links absolute bottom-4 left-6 right-6 flex justify-between">
-            <a href="https://github.com/ashif57/dynamic-pricing" class="text-sm font-medium text-white hover:text-neon-cyan transition duration-300">
-              <i class="fab fa-github"></i> GitHub
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project: Hotel Management System -->
-      <div class="glassmorphism-card project-card rounded-xl overflow-hidden relative">
-        <div class="h-48 bg-gray-800 flex items-center justify-center">
-          <i class="fas fa-hotel text-6xl text-neon-cyan"></i>
-        </div>
-        <div class="p-6">
-          <h3 class="text-xl font-bold mb-2">Hotel Management System</h3>
-          <p class="text-text-light mb-4">Flask app with modules for rooms, guests, bookings, payments, and user login.</p>
-          <div class="project-links absolute bottom-4 left-6 right-6 flex justify-between">
-            <a href="https://github.com/ashif57/Hotel-management-system" class="text-sm font-medium text-white hover:text-neon-cyan transition duration-300">
-              <i class="fab fa-github"></i> GitHub
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project: E-Commerce + LLM Chatbot -->
-      <div class="glassmorphism-card project-card rounded-xl overflow-hidden relative">
-        <div class="h-48 bg-gray-800 flex items-center justify-center">
-          <i class="fas fa-shopping-cart text-6xl text-neon-cyan"></i>
-        </div>
-        <div class="p-6">
-          <h3 class="text-xl font-bold mb-2">E-Commerce + Chatbot</h3>
-          <p class="text-text-light mb-4">Django-based full stack app with cart, product management, and integrated chatbot using LLMs.</p>
-          <div class="project-links absolute bottom-4 left-6 right-6 flex justify-between">
-            <a href="https://github.com/ashif57/E-Commerce-Website-with-LLM-Integration" class="text-sm font-medium text-white hover:text-neon-cyan transition duration-300">
-              <i class="fab fa-github"></i> GitHub
-            </a>
-          </div>
-        </div>
-      </div>
-
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"><i class="fas fa-chevron-right"></i></div>
+        <div class="swiper-button-prev"><i class="fas fa-chevron-left"></i></div>
     </div>
     <div class="text-center mt-12">
   <a href="https://github.com/ashif57?tab=repositories" target="_blank"
@@ -368,7 +326,7 @@
     </section>
     </main>
     <!-- Footer -->
-    <footer class="text-text-light py-8 px-6">
+    <footer class="text-text-light py-8 px-6 mt-auto">
         <div class="container mx-auto">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <p class="mb-4 md:mb-0">Made with <span class="text-red-500">❤️</span> by Ashif</p>
@@ -544,6 +502,8 @@
         });
     });
 </script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="projects.js"></script>
 <script>
     // Theme toggle
     const themeToggle = document.getElementById('theme-toggle');
