@@ -33,6 +33,11 @@ body.light-theme {
     background-color: var(--light-bg);
     color: var(--light-text);
 }
+#home {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+}
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Urbanist', sans-serif; /* Or Poppins, as in original */
@@ -210,6 +215,10 @@ body.light-theme .glow-border {
     z-index: 20; /* Bring to front on hover */
 }
 
+
+body.light-theme .project-card:hover {
+    box-shadow: 0 0 30px 10px var(--light-neon-cyan), 0 15px 30px rgba(0, 0, 0, 0.1);
+}
 body.light-theme .project-card i {
     color: var(--light-accent);
 }
