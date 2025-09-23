@@ -515,6 +515,9 @@ body.light-theme .framework-icon {
     box-shadow: 0 0 15px var(--light-neon-cyan);
     border: 1px solid var(--light-neon-cyan);
 }
+body.light-theme .framework-icon span {
+    color: var(--light-text);
+}
 
 body.light-theme .framework-center-icon {
     background: rgba(45, 42, 50, 0.2);
@@ -572,4 +575,101 @@ body.light-theme textarea::placeholder {
 
 #projects {
     overflow: visible !important;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    #home {
+        min-height: auto;
+        padding-top: 5rem;
+        padding-bottom: 3rem;
+        text-align: center;
+    }
+
+    #home .flex-col {
+        align-items: center;
+    }
+
+    .framework-orbit {
+        width: 300px;
+        height: 150px;
+    }
+
+    .framework-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+        transform: rotate(calc(360deg / 13 * var(--i))) translateX(150px) rotate(calc(-360deg / 13 * var(--i)));
+    }
+
+    @keyframes float {
+        0%, 100% {
+            transform: rotate(calc(360deg / 13 * var(--i))) translateX(150px) rotate(calc(-360deg / 13 * var(--i))) translateY(0px);
+        }
+        50% {
+            transform: rotate(calc(360deg / 13 * var(--i))) translateX(150px) rotate(calc(-360deg / 13 * var(--i))) translateY(-10px);
+        }
+    }
+
+    .swiper-slide {
+        width: 80%;
+        max-width: 320px;
+        height: auto;
+    }
+
+    .text-4xl {
+        font-size: 2.5rem;
+    }
+
+    .text-2xl {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .framework-orbit {
+        width: 250px;
+        height: 125px;
+    }
+
+    .framework-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+        transform: rotate(calc(360deg / 13 * var(--i))) translateX(125px) rotate(calc(-360deg / 13 * var(--i)));
+    }
+
+    @keyframes float {
+        0%, 100% {
+            transform: rotate(calc(360deg / 13 * var(--i))) translateX(125px) rotate(calc(-360deg / 13 * var(--i))) translateY(0px);
+        }
+        50% {
+            transform: rotate(calc(360deg / 13 * var(--i))) translateX(125px) rotate(calc(-360deg / 13 * var(--i))) translateY(-8px);
+        }
+    }
+
+    .swiper-slide {
+        width: 90%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    .text-4xl {
+        font-size: 2rem;
+    }
+
+    .text-2xl {
+        font-size: 1.25rem;
+    }
+}
+
+/* Custom Text Selection Highlight */
+::selection {
+  background-color: var(--neon-cyan);
+  color: var(--dark-bg);
+}
+
+body.light-theme::selection {
+  background-color: var(--light-neon-cyan);
+  color: var(--light-text);
 }

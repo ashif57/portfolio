@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
             effect: 'slide',
             grabCursor: true,
             centeredSlides: true,
-            slidesPerView: 3,
+            slidesPerView: 'auto',
             watchOverflow: true,
             slidesPerGroup: 1,
             spaceBetween: 20, /* Add space between slides */
