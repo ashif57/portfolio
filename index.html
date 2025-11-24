@@ -1,620 +1,1236 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ashif | Full Stack Developer & AI-ML Enthusiast</title>
-    <meta name="author" content="Ashif">
-    <meta name="description" content="A results-driven Full Stack Developer and AI/ML enthusiast with hands-on experience in building and deploying production-level applications.">
-    <meta name="keywords" content="ashif, ashif.tech, Ashif Navheed,ashif .tech, Ashif, Ashif.tech, Ashif .tech, Ashif Navheed Portfolio, Ashif Navheed Website, Ashif Navheed Blog, Ashif Navheed Projects, Ashif Navheed Contact, Ashif Navheed About Me, Ashif Navheed Resume, Ashif Navheed GitHub Profile, Ashif Navheed LinkedIn Profile, Ashif Full Stack Developer, full stack developer, Ashif Full Stack Developer, Backend Developer, AI-ML Enthusiast, Python, Django, React, React Native, PostgreSQL, DigitalOcean, CI/CD, GitHub Actions, Linux, Ubuntu">
-    
+    <meta name="author" content="Ashif" />
+    <meta
+      name="description"
+      content="A results-driven Full Stack Developer and AI/ML enthusiast with hands-on experience in building and deploying production-level applications."
+    />
+    <meta
+      name="keywords"
+      content="ashif, ashif.tech, Ashif Navheed,ashif .tech, Ashif, Ashif.tech, Ashif .tech, Ashif Navheed Portfolio, Ashif Navheed Website, Ashif Navheed Blog, Ashif Navheed Projects, Ashif Navheed Contact, Ashif Navheed About Me, Ashif Navheed Resume, Ashif Navheed GitHub Profile, Ashif Navheed LinkedIn Profile, Ashif Full Stack Developer, full stack developer, Ashif Full Stack Developer, Backend Developer, AI-ML Enthusiast, Python, Django, React, React Native, PostgreSQL, DigitalOcean, CI/CD, GitHub Actions, Linux, Ubuntu"
+    />
+
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Ashif | Full Stack Developer & AI-ML Enthusiast">
-    <meta property="og:description" content="A results-driven Full Stack Developer and AI/ML enthusiast with hands-on experience in building and deploying production-level applications.">
-    <meta property="og:image" content="asserts/logo.png">
-    <meta property="og:url" content="https://ashif.tech/">
-    <meta property="og:type" content="website">
+    <meta
+      property="og:title"
+      content="Ashif | Full Stack Developer & AI-ML Enthusiast"
+    />
+    <meta
+      property="og:description"
+      content="A results-driven Full Stack Developer and AI/ML enthusiast with hands-on experience in building and deploying production-level applications."
+    />
+    <meta property="og:image" content="asserts/logo.png" />
+    <meta property="og:url" content="https://ashif.tech/" />
+    <meta property="og:type" content="website" />
 
     <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Ashif | Full Stack Developer & AI-ML Enthusiast">
-    <meta name="twitter:description" content="A results-driven Full Stack Developer and AI/ML enthusiast with hands-on experience in building and deploying production-level applications.">
-    <meta name="twitter:image" content="asserts/logo.png">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Ashif | Full Stack Developer & AI-ML Enthusiast"
+    />
+    <meta
+      name="twitter:description"
+      content="A results-driven Full Stack Developer and AI/ML enthusiast with hands-on experience in building and deploying production-level applications."
+    />
+    <meta name="twitter:image" content="asserts/logo.png" />
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.51/build/spline-viewer.js"></script>
-    <link rel="icon" href="asserts/logo.png" type="image/png">
-</head>
-<body class="flex flex-col min-h-screen">
-        <div class="starfield"></div>
-        <!-- Navigation -->
-        <nav class="sticky top-0 z-50 transition-all duration-300 ease-in-out" id="navbar">
-            <div class="container mx-auto px-6 py-4">
-                <div class="flex justify-between items-center">
-                    <a href="#home" class="flex items-center">
-                        <img src="asserts/logo.png" alt="Ashif Logo" class="h-10 w-10 rounded-full">
-                    </a>
-                    <div class="hidden md:flex space-x-8">
-                        <a href="#home" class="nav-link relative hover:text-neon-cyan transition-colors duration-300">Home</a>
-                        <a href="#skills" class="nav-link relative hover:text-neon-cyan transition-colors duration-300">Skills</a>
-                        <a href="#certifications" class="nav-link relative hover:text-neon-cyan transition-colors duration-300">Certifications</a>
-                        <a href="#experience" class="nav-link relative hover:text-neon-cyan transition-colors duration-300">Experience</a>
-                        <a href="#projects" class="nav-link relative hover:text-neon-cyan transition-colors duration-300">Projects</a>
-                        <a href="#contact" class="nav-link relative hover:text-neon-cyan transition-colors duration-300">Contact</a>
-                    </div>
-                    <div class="flex items-center">
-                      <button class="focus:outline-none mr-4" id="theme-toggle">
-                          <i class="fas fa-sun text-xl"></i>
-                      </button>
-                      <button class="md:hidden focus:outline-none" id="menu-toggle">
-                          <i class="fas fa-bars text-xl"></i>
-                      </button>
-                    </div>
-                </div>
-                <!-- Mobile Menu -->
-                <div class="md:hidden hidden mt-4" id="mobile-menu">
-                    <a href="#home" class="block py-2 nav-link hover:text-neon-cyan transition-colors duration-300">Home</a>
-                    <a href="#skills" class="block py-2 nav-link hover:text-neon-cyan transition-colors duration-300">Skills</a>
-                    <a href="#certifications" class="block py-2 nav-link hover:text-neon-cyan transition-colors duration-300">Certifications</a>
-                    <a href="#experience" class="block py-2 nav-link hover:text-neon-cyan transition-colors duration-300">Experience</a>
-                    <a href="#projects" class="block py-2 nav-link hover:text-neon-cyan transition-colors duration-300">Projects</a>
-                    <a href="#contact" class="block py-2 nav-link hover:text-neon-cyan transition-colors duration-300">Contact</a>
-                </div>
-            </div>
-        </nav>
-        <main class="flex-grow">
-        <!-- Hero Section -->
-    <section id="home" class="px-6 relative overflow-hidden">
-        <div class="container mx-auto flex flex-col md:flex-row items-center relative z-10">
-            <div class="md:w-1/2 mb-10 md:mb-0">
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 gradient-text">
-                    Hi, I'm <span class="text-neon-cyan">Ashif</span>
-                </h1>
-                <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-text-light">
-                    Full Stack Developer | AI-ML Enthusiast
-                </h2>
-                <p class="text-lg text-text-light mb-6 max-w-xl text-justify leading-relaxed">
-                    A results-driven Full Stack Developer and AI/ML enthusiast with hands-on experience in building and deploying production-level applications. Proficient in both backend (Django, Python) and frontend (React) development, as well as mobile app development with React Native. Experienced in setting up CI/CD pipelines, managing cloud infrastructure, and working in Linux/Ubuntu environments. Passionate about leveraging technology to solve real-world problems and continuously expanding my skill set.
-                </p>
-                <div class="flex flex-wrap gap-4">
-                    <a href="https://drive.google.com/file/d/142jyaSZkfoXt-Z_QZV3S1C9U5Mq7Fexf/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-primary">
-                        <i class="fas fa-file-alt mr-2"></i> Resume
-                    </a>
-                    <a href="https://github.com/ashif57" target="_blank" rel="noopener noreferrer" class="btn-secondary">
-                        <i class="fab fa-github mr-2"></i> GitHub
-                    </a>
-                    <a href="https://www.linkedin.com/in/ashifnavheed57/" target="_blank" rel="noopener noreferrer" class="btn-primary">
-                        <i class="fab fa-linkedin-in mr-2"></i> LinkedIn
-                    </a>
-                </div>
-            </div>
-            <div class="md:w-1/2 flex justify-center items-center">
-                <div class="relative w-full h-[42rem]">
-                    <spline-viewer url="https://prod.spline.design/YYjaLjTUabT2qgel/scene.splinecode"></spline-viewer>
-                </div>
-            </div>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/@splinetool/viewer@1.10.51/build/spline-viewer.js"
+    ></script>
+    <link rel="icon" href="asserts/logo.png" type="image/png" />
+  </head>
+  <body class="flex flex-col min-h-screen">
+    <div class="starfield"></div>
+    <!-- Navigation -->
+    <nav
+      class="sticky top-0 z-50 transition-all duration-300 ease-in-out"
+      id="navbar"
+    >
+      <div class="container mx-auto px-6 py-4">
+        <div class="flex justify-between items-center">
+          <a href="#home" class="flex items-center">
+            <img
+              src="asserts/logo.png"
+              alt="Ashif Logo"
+              class="h-10 w-10 rounded-full"
+            />
+          </a>
+          <div class="hidden md:flex space-x-8">
+            <a
+              href="#home"
+              class="nav-link relative hover:text-neon-cyan transition-colors duration-300"
+              >Home</a
+            >
+            <a
+              href="#skills"
+              class="nav-link relative hover:text-neon-cyan transition-colors duration-300"
+              >Skills</a
+            >
+            <a
+              href="#certifications"
+              class="nav-link relative hover:text-neon-cyan transition-colors duration-300"
+              >Certifications</a
+            >
+            <a
+              href="#experience"
+              class="nav-link relative hover:text-neon-cyan transition-colors duration-300"
+              >Experience</a
+            >
+            <a
+              href="#projects"
+              class="nav-link relative hover:text-neon-cyan transition-colors duration-300"
+              >Projects</a
+            >
+            <a
+              href="#contact"
+              class="nav-link relative hover:text-neon-cyan transition-colors duration-300"
+              >Contact</a
+            >
+          </div>
+          <div class="flex items-center">
+            <button class="focus:outline-none mr-4" id="theme-toggle">
+              <i class="fas fa-sun text-xl"></i>
+            </button>
+            <button class="md:hidden focus:outline-none" id="menu-toggle">
+              <i class="fas fa-bars text-xl"></i>
+            </button>
+          </div>
         </div>
-    </section>
-     <!-- Skills Section -->
-<section id="skills" class="py-16 px-6">
-    <div class="container mx-auto">
-        <h2 class="text-3xl font-bold text-center mb-12 gradient-text">My Expertise</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden mt-4" id="mobile-menu">
+          <a
+            href="#home"
+            class="block py-2 nav-link hover:text-neon-cyan transition-colors duration-300"
+            >Home</a
+          >
+          <a
+            href="#skills"
+            class="block py-2 nav-link hover:text-neon-cyan transition-colors duration-300"
+            >Skills</a
+          >
+          <a
+            href="#certifications"
+            class="block py-2 nav-link hover:text-neon-cyan transition-colors duration-300"
+            >Certifications</a
+          >
+          <a
+            href="#experience"
+            class="block py-2 nav-link hover:text-neon-cyan transition-colors duration-300"
+            >Experience</a
+          >
+          <a
+            href="#projects"
+            class="block py-2 nav-link hover:text-neon-cyan transition-colors duration-300"
+            >Projects</a
+          >
+          <a
+            href="#contact"
+            class="block py-2 nav-link hover:text-neon-cyan transition-colors duration-300"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </nav>
+    <main class="flex-grow">
+      <!-- Hero Section -->
+      <section id="home" class="px-6 relative overflow-hidden">
+        <div
+          class="container mx-auto flex flex-col md:flex-row items-center relative z-10"
+        >
+          <div class="md:w-1/2 mb-10 md:mb-0">
+            <h1
+              class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 gradient-text"
+            >
+              Hi, I'm <span class="text-neon-cyan">Ashif</span>
+            </h1>
+            <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-text-light">
+              Full Stack Developer | AI-ML Enthusiast
+            </h2>
+            <p
+              class="text-lg text-text-light mb-6 max-w-xl text-justify leading-relaxed"
+            >
+              A results-driven Full Stack Developer and AI/ML enthusiast with
+              hands-on experience in building and deploying production-level
+              applications. Proficient in both backend (Django, Python) and
+              frontend (React) development, as well as mobile app development
+              with React Native. Experienced in setting up CI/CD pipelines,
+              managing cloud infrastructure, and working in Linux/Ubuntu
+              environments. Passionate about leveraging technology to solve
+              real-world problems and continuously expanding my skill set.
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <a
+                href="https://drive.google.com/file/d/142jyaSZkfoXt-Z_QZV3S1C9U5Mq7Fexf/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-primary"
+              >
+                <i class="fas fa-file-alt mr-2"></i> Resume
+              </a>
+              <a
+                href="https://github.com/ashif57"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-secondary"
+              >
+                <i class="fab fa-github mr-2"></i> GitHub
+              </a>
+              <a
+                href="https://www.linkedin.com/in/ashifnavheed57/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-primary"
+              >
+                <i class="fab fa-linkedin-in mr-2"></i> LinkedIn
+              </a>
+            </div>
+          </div>
+          <div class="md:w-1/2 flex justify-center items-center">
+            <div class="relative w-full h-[42rem]">
+              <spline-viewer
+                url="https://prod.spline.design/YYjaLjTUabT2qgel/scene.splinecode"
+              ></spline-viewer>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Skills Section -->
+      <section id="skills" class="py-16 px-6">
+        <div class="container mx-auto">
+          <h2 class="text-3xl font-bold text-center mb-12 gradient-text">
+            My Expertise
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             <!-- Full Stack Card -->
-            <div class="glassmorphism-card card-hover p-8 rounded-xl relative overflow-hidden">
-                <div class="bg-neon-cyan bg-opacity-20 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
-                    <i class="fas fa-code text-2xl text-neon-cyan"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-3">Full Stack Development</h3>
-                <ul class="list-disc list-inside text-text-light space-y-1">
-                    <li>Frontend: React, Tailwind</li>
-                    <li>Backend: Django, Python</li>
-                    <li>Databases: PostgreSQL, SQL, Supabase, MongoDB, Firebase</li>
-                    <li>APIs: RESTful</li>
-                </ul>
+            <div
+              class="glassmorphism-card card-hover p-8 rounded-xl relative overflow-hidden"
+            >
+              <div
+                class="bg-neon-cyan bg-opacity-20 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6"
+              >
+                <i class="fas fa-code text-2xl text-neon-cyan"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-3">Full Stack Development</h3>
+              <ul class="list-disc list-inside text-text-light space-y-1">
+                <li>Frontend: React, Tailwind</li>
+                <li>Backend: Django, Python</li>
+                <li>Databases: PostgreSQL, Supabase, MongoDB, Firebase</li>
+                <li>APIs: RESTful</li>
+              </ul>
             </div>
 
             <!-- AI/ML Card -->
-            <div class="glassmorphism-card card-hover p-8 rounded-xl relative overflow-hidden">
-                <div class="bg-neon-cyan bg-opacity-20 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
-                    <i class="fas fa-robot text-2xl text-neon-cyan"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-3">AI & Machine Learning</h3>
-                <ul class="list-disc list-inside text-text-light space-y-1">
-                    <li>NumPy, Pandas, Scikit-learn</li>
-                    <li>TensorFlow & Keras</li>
-                    <li>OpenCV & CNNs</li>
-                    <li>LangChain, HuggingFace</li>
-                </ul>
+            <div
+              class="glassmorphism-card card-hover p-8 rounded-xl relative overflow-hidden"
+            >
+              <div
+                class="bg-neon-cyan bg-opacity-20 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6"
+              >
+                <i class="fas fa-robot text-2xl text-neon-cyan"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-3">AI & Machine Learning</h3>
+              <ul class="list-disc list-inside text-text-light space-y-1">
+                <li>NumPy, Pandas, Scikit-learn</li>
+                <li>TensorFlow & Keras</li>
+                <li>OpenCV & CNNs</li>
+                <li>LangChain, HuggingFace</li>
+              </ul>
             </div>
 
             <!-- Mobile Dev Card -->
-            <div class="glassmorphism-card card-hover p-8 rounded-xl relative overflow-hidden">
-                <div class="bg-neon-cyan bg-opacity-20 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
-                    <i class="fas fa-mobile-alt text-2xl text-neon-cyan"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-3">Mobile App Development</h3>
-                <ul class="list-disc list-inside text-text-light space-y-1">
-                    <li>React Native</li>
-                    <li>Cross-Platform Apps</li>
-                    <li>API Integration</li>
-                </ul>
+            <div
+              class="glassmorphism-card card-hover p-8 rounded-xl relative overflow-hidden"
+            >
+              <div
+                class="bg-neon-cyan bg-opacity-20 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6"
+              >
+                <i class="fas fa-mobile-alt text-2xl text-neon-cyan"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-3">Mobile App Development</h3>
+              <ul class="list-disc list-inside text-text-light space-y-1">
+                <li>React Native</li>
+                <li>Cross-Platform Apps</li>
+                <li>API Integration</li>
+              </ul>
             </div>
-            
+
             <!-- DevOps/Cloud Card -->
-            <div class="glassmorphism-card card-hover p-8 rounded-xl relative overflow-hidden">
-                <div class="bg-neon-cyan bg-opacity-20 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
-                    <i class="fas fa-cloud text-2xl text-neon-cyan"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-3">Cloud, DevOps & Tools</h3>
-                <ul class="list-disc list-inside text-text-light space-y-1">
-                    <li>Cloud: DigitalOcean</li>
-                    <li>CI/CD: GitHub Actions</li>
-                    <li>OS: Ubuntu, Linux</li>
-                    <li>Tools: Git, Docker, Postman</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Frameworks Section -->
-    <section id="frameworks" class="py-16 px-6">
-      <video autoplay muted loop class="frameworks-video-bg">
-        <source src="asserts/fish_1.mp4" type="video/mp4">
-      </video>
-      <div class="video-overlay"></div>
-      <div class="container mx-auto">
-        <h2 class="text-3xl font-bold text-center mb-12 gradient-text">Frameworks and Tech Stacks familiar with</h2>
-        <div class="relative flex justify-center items-center h-96">
-          <div class="framework-orbit">
-            <div class="framework-icon" style="--i:0;"><i class="devicon-react-original"></i><span>React</span></div>
-            <div class="framework-icon" style="--i:1;"><i class="devicon-django-plain"></i><span>Django</span></div>
-            <div class="framework-icon" style="--i:2;"><i class="devicon-fastapi-plain"></i><span>FastAPI</span></div>
-            <div class="framework-icon" style="--i:3;"><i class="devicon-flask-original"></i><span>Flask</span></div>
-            <div class="framework-icon" style="--i:4;"><i class="devicon-nextjs-original"></i><span>Next.js</span></div>
-            <div class="framework-icon" style="--i:5;"><i class="devicon-postgresql-plain"></i><span>PostgreSQL</span></div>
-            <div class="framework-icon" style="--i:6;"><i class="devicon-html5-plain"></i><span>HTML5</span></div>
-            <div class="framework-icon" style="--i:7;"><i class="devicon-css3-plain"></i><span>CSS3</span></div>
-            <div class="framework-icon" style="--i:8;"><i class="devicon-tailwindcss-plain"></i><span>Tailwind</span></div>
-            <div class="framework-icon" style="--i:9;"><i class="devicon-github-original"></i><span>GitHub</span></div>
-            <div class="framework-icon" style="--i:10;"><i class="devicon-mongodb-plain"></i><span>MongoDB</span></div>
-            <div class="framework-icon" style="--i:11;"><i class="devicon-python-plain"></i><span>Python</span></div>
-            <div class="framework-icon" style="--i:12;"><i class="devicon-react-original"></i><span>React Native</span></div>
-          </div>
-          <div class="framework-center-icon">
-            <i class="devicon-devicon-plain"></i>
-          </div>
-        </div>
-      </div>
-    </section>
-
-   
-    <!-- Certifications Section -->
-<section id="certifications" class="py-16 px-6">
-  <div class="container mx-auto">
-    <h2 class="text-3xl font-bold text-center mb-12 gradient-text">Certifications & Courses</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <!-- Certification 1 -->
-      <div class="glassmorphism-card card-hover p-8 rounded-xl relative overflow-hidden">
-        <div class="bg-neon-cyan bg-opacity-20 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
-          <i class="fas fa-microchip text-2xl text-neon-cyan"></i>
-        </div>
-        <h3 class="text-xl font-bold mb-3">AI-ML Development Certificate</h3>
-        <p class="text-text-light mb-4">Projects included Lane Detection, Heat Wave Alert System, and Plant Leaf Disease Detection.</p>
-        <div class="flex justify-between items-center">
-          <span class="text-sm text-neon-cyan font-medium">Next24tech | Aug 2024</span>
-          <a href="https://www.linkedin.com/in/ashifnavheed57/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-neon-cyan transition duration-300">
-            <i class="fas fa-external-link-alt"></i>
-          </a>
-        </div>
-      </div>
-
-      <!-- Certification 2 -->
-      <div class="glassmorphism-card card-hover p-8 rounded-xl relative overflow-hidden">
-        <div class="bg-neon-cyan bg-opacity-20 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
-          <i class="fas fa-code text-2xl text-neon-cyan"></i>
-        </div>
-        <h3 class="text-xl font-bold mb-3">Django Development Certificate</h3>
-        <p class="text-text-light mb-4">Hands-on project work with authentication, CRUD, environment setup, and backend logic.</p>
-        <div class="flex justify-between items-center">
-          <span class="text-sm text-neon-cyan font-medium">HCL GUVI | June 2024</span>
-          <a href="https://www.guvi.in/share-certificate/59q06S49JQ14t75w07" target="_blank" rel="noopener noreferrer" class="text-white hover:text-neon-cyan transition duration-300">
-            <i class="fas fa-external-link-alt"></i>
-          </a>
-        </div>
-      </div>
-
-      <!-- Certification 3 -->
-      <div class="glassmorphism-card card-hover p-8 rounded-xl relative overflow-hidden">
-        <div class="bg-neon-cyan bg-opacity-20 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
-          <i class="fas fa-brain text-2xl text-neon-cyan"></i>
-        </div>
-        <h3 class="text-xl font-bold mb-3">Generative AI Applications</h3>
-        <p class="text-text-light mb-4">Built RAG-based AI apps with LLMs and Python. Focused on practical Generative AI integration.</p>
-        <div class="flex justify-between items-center">
-          <span class="text-sm text-neon-cyan font-medium">HCL GUVI | June 2025</span>
-          <a href="https://www.guvi.in/share-certificate/1W6YsJnV8709t52L11" target="_blank" rel="noopener noreferrer" class="text-white hover:text-neon-cyan transition duration-300">
-            <i class="fas fa-external-link-alt"></i>
-          </a>
-        </div>
-        
-      </div>
-    </div>
-    
-  </div>
-  <!-- View All Certifications Button -->
-<div class="text-center mt-12">
-  <a href="https://www.linkedin.com/in/ashifnavheed57/details/certifications/" target="_blank" rel="noopener noreferrer"
-     class="btn-primary inline-block">
-    View All Certifications <i class="fas fa-arrow-right ml-2"></i>
-  </a>
-</div>
-
-</section>
-<!-- Experience Section -->
-    <section id="experience" class="py-16 px-6">
-      <div class="container mx-auto">
-        <h2 class="text-3xl font-bold text-center mb-12 gradient-text">Experience</h2>
-        <div class="glassmorphism-card p-8 rounded-xl relative overflow-hidden mb-8">
-          <div class="flex justify-between items-start">
-            <div>
-              <h3 class="text-xl font-bold">Full Stack Developer - Project "Garuden"</h3>
-              <p class="text-neon-cyan font-medium">Trichy City Police</p>
+            <div
+              class="glassmorphism-card card-hover p-8 rounded-xl relative overflow-hidden"
+            >
+              <div
+                class="bg-neon-cyan bg-opacity-20 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6"
+              >
+                <i class="fas fa-cloud text-2xl text-neon-cyan"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-3">Cloud, DevOps & Tools</h3>
+              <ul class="list-disc list-inside text-text-light space-y-1">
+                <li>Cloud: DigitalOcean, AWS</li>
+                <li>CI/CD: GitHub Actions</li>
+                <li>OS: Ubuntu, Linux</li>
+                <li>Tools: Git, Docker, Postman, Kubernetes </li>
+              </ul>
             </div>
           </div>
-          <ul class="list-disc list-inside text-text-light space-y-2 mt-4">
-            <li>Architected and deployed "Garuden," a full-stack digital case management system to modernize criminal records for law enforcement.</li>
-            <li>Built a secure, role-based platform using React, Django, and PostgreSQL, deployed on DigitalOcean with a CI/CD pipeline via GitHub Actions.</li>
-            <li>Implemented core features including JWT-based authentication with 2FA, data visualization dashboards, PDF report generation, and cloud storage integration.</li>
-            <li>Resolved critical data integrity bugs and enhanced the UI/UX, significantly improving application stability and usability for the Trichy City Police.</li>
-          </ul>
         </div>
-        <div class="glassmorphism-card p-8 rounded-xl relative overflow-hidden">
-          <div class="flex justify-between items-start">
-            <div>
-              <h3 class="text-xl font-bold">Full Stack Development Intern</h3>
-              <p class="text-neon-cyan font-medium">VDart Technologies Pvt Ltd</p>
-              <p class="text-sm text-text-light mt-1">[July 7, 2025 – Present]</p>
-            </div>
-            <a href="#" class="btn-secondary">Credential Link</a>
-          </div>
-          <ul class="list-disc list-inside text-text-light space-y-2 mt-4">
-            <li>Developed and contributed to diverse projects, including a Hall Booking System, an R&R (Rewards & Recognition) platform, and a Quiz Management tool.</li>
-            <li>Engineered full-stack solutions using Django (backend) and React with Tailwind CSS (frontend), utilizing Supabase for backend services.</li>
-            <li>Managed the deployment of applications, with frontends on Netlify and backend services on Render, ensuring seamless integration and delivery.</li>
-            <li>Strengthened practical skills in MVC architecture, modern frontend frameworks, and cloud-based deployment workflows.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-
-<!-- Projects Section -->
-<section id="projects" class="py-16 px-6">
-  <div class="container mx-auto">
-    <h2 class="text-3xl font-bold text-center mb-12 gradient-text">Featured Projects</h2>
-    
-    <!-- Carousel Wrapper -->
-    <div class="swiper mySwiper" id="projects-container">
-        <div class="swiper-wrapper">
-            <!-- Projects will be dynamically inserted here -->
-        </div>
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-next"><i class="fas fa-chevron-right"></i></div>
-        <div class="swiper-button-prev"><i class="fas fa-chevron-left"></i></div>
-    </div>
-    <div class="text-center mt-12">
-  <a href="https://github.com/ashif57?tab=repositories" target="_blank" rel="noopener noreferrer"
-     class="btn-primary inline-block">
-    View All Projects <i class="fas fa-arrow-right ml-2"></i>
-  </a>
-</div>
-
-  </div>
-</section>
-
-    <section id="contact" class="py-16 px-6">
+      </section>
+      <!-- Frameworks Section -->
+      <section id="frameworks" class="py-16 px-6">
+        <video autoplay muted loop class="frameworks-video-bg">
+          <source src="asserts/fish_1.mp4" type="video/mp4" />
+        </video>
+        <div class="video-overlay"></div>
         <div class="container mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-12 gradient-text">Get In Touch</h2>
-            <div class="flex flex-col lg:flex-row gap-12">
-                <div class="lg:w-1/2">
-                   <form id="contact-form" action="https://formsubmit.co/fcf1da2427cbf39e408046ce9baa229f" method="POST" class="space-y-6 glassmorphism-card p-8 rounded-xl">
-    <!-- Hidden fields -->
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_subject" value="New message from Portfolio Contact Form!">
-    <input type="hidden" name="_template" value="box">
-
-    <div>
-        <label for="name" class="block mb-2 font-medium text-text-light">Your Name</label>
-        <input type="text" name="name" required class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-10 border border-neon-violet focus:outline-none focus:ring-2 focus:ring-neon-cyan transition duration-300 text-text-light placeholder-gray-400" placeholder="John Doe">
-    </div>
-    <div>
-        <label for="email" class="block mb-2 font-medium text-text-light">Email Address</label>
-        <input type="email" name="email" required class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-10 border border-neon-violet focus:outline-none focus:ring-2 focus:ring-neon-cyan transition duration-300 text-text-light placeholder-gray-400" placeholder="john@example.com">
-    </div>
-    <div>
-        <label for="message" class="block mb-2 font-medium text-text-light">Your Message</label>
-        <textarea name="message" rows="5" required class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-10 border border-neon-violet focus:outline-none focus:ring-2 focus:ring-neon-cyan transition duration-300 text-text-light placeholder-gray-400" placeholder="Hello Ashif..."></textarea>
-    </div>
-    <button type="submit" class="btn-secondary w-full">
-        Send Message <i class="fas fa-paper-plane ml-2"></i>
-    </button>
-    <div id="form-status" class="mt-4 text-center"></div>
-</form>
-
-                </div>
-                <div class="lg:w-1/2 flex flex-col justify-center">
-                    <div class="mb-8">
-                        <h3 class="text-xl font-bold mb-4 text-neon-cyan">Let's Connect</h3>
-                        <p class="mb-6 text-text-light">I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision.</p>
-                        <div class="flex space-x-6">
-                            <a href="https://github.com/ashif57" target="_blank" rel="noopener noreferrer" class="social-icon text-2xl transition duration-300 text-text-light hover:text-neon-cyan">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="https://www.linkedin.com/in/ashifnavheed57/" target="_blank" rel="noopener noreferrer" class="social-icon text-2xl transition duration-300 text-text-light hover:text-neon-cyan">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                            <a href="mailto:ashifnavheed@gmail.com" class="social-icon text-2xl transition duration-300 text-text-light hover:text-neon-cyan">
-                                <i class="fas fa-envelope"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="glassmorphism-card p-6 rounded-lg">
-                        <h3 class="text-xl font-bold mb-4 text-neon-cyan">Current Availability</h3>
-                        <p class="mb-4 text-text-light">I'm currently looking for full-time or freelance opportunities in backend development and AI/ML engineering.</p>
-                        <p class="text-text-light">If you have a project that needs my expertise, don't hesitate to reach out!</p>
-                    </div>
-                </div>
+          <h2 class="text-3xl font-bold text-center mb-12 gradient-text">
+            Frameworks and Tech Stacks familiar with
+          </h2>
+          <div class="relative flex justify-center items-center h-96">
+            <div class="framework-orbit">
+              <div class="framework-icon" style="--i: 0">
+                <i class="devicon-react-original"></i><span>React</span>
+              </div>
+              <div class="framework-icon" style="--i: 1">
+                <i class="devicon-django-plain"></i><span>Django</span>
+              </div>
+              <div class="framework-icon" style="--i: 2">
+                <i class="devicon-fastapi-plain"></i><span>FastAPI</span>
+              </div>
+              <div class="framework-icon" style="--i: 3">
+                <i class="devicon-flask-original"></i><span>Flask</span>
+              </div>
+              <div class="framework-icon" style="--i: 4">
+                <i class="devicon-nextjs-original"></i><span>Next.js</span>
+              </div>
+              <div class="framework-icon" style="--i: 5">
+                <i class="devicon-postgresql-plain"></i><span>PostgreSQL</span>
+              </div>
+              <div class="framework-icon" style="--i: 6">
+                <i class="devicon-html5-plain"></i><span>HTML5</span>
+              </div>
+              <div class="framework-icon" style="--i: 7">
+                <i class="devicon-css3-plain"></i><span>CSS3</span>
+              </div>
+              <div class="framework-icon" style="--i: 8">
+                <i class="devicon-tailwindcss-plain"></i><span>Tailwind</span>
+              </div>
+              <div class="framework-icon" style="--i: 9">
+                <i class="devicon-github-original"></i><span>GitHub</span>
+              </div>
+              <div class="framework-icon" style="--i: 10">
+                <i class="devicon-mongodb-plain"></i><span>MongoDB</span>
+              </div>
+              <div class="framework-icon" style="--i: 11">
+                <i class="devicon-python-plain"></i><span>Python</span>
+              </div>
+              <div class="framework-icon" style="--i: 12">
+                <i class="devicon-react-original"></i><span>React Native</span>
+              </div>
             </div>
+            <div class="framework-center-icon">
+              <i class="devicon-devicon-plain"></i>
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
+
+      <!-- Live Projects Section -->
+      <section id="live-projects" class="py-16 px-6">
+        <div class="container mx-auto">
+          <h2 class="text-3xl font-bold text-center mb-12 gradient-text">
+            Live Project Showcases
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Project 1 -->
+            <div
+              class="glassmorphism-card card-hover p-8 rounded-xl relative overflow-hidden group"
+            >
+              <div
+                class="absolute top-0 right-0 bg-neon-cyan text-dark-bg text-xs font-bold px-3 py-1 rounded-bl-lg"
+              >
+                LIVE
+              </div>
+              <div
+                class="bg-neon-cyan bg-opacity-20 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300"
+              >
+                <i class="fas fa-calendar-check text-2xl text-neon-cyan"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-3 text-center">
+                Hall Booking System
+              </h3>
+              <p class="text-text-light mb-6 text-center text-sm">
+                A comprehensive system for managing hall bookings efficiently.
+              </p>
+              <div class="text-center">
+                <a
+                  href="https://hall-booking-system57.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-secondary text-sm py-2 px-4"
+                >
+                  Visit Site <i class="fas fa-external-link-alt ml-2"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div
+              class="glassmorphism-card card-hover p-8 rounded-xl relative overflow-hidden group"
+            >
+              <div
+                class="absolute top-0 right-0 bg-neon-cyan text-dark-bg text-xs font-bold px-3 py-1 rounded-bl-lg"
+              >
+                LIVE
+              </div>
+              <div
+                class="bg-neon-cyan bg-opacity-20 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300"
+              >
+                <i class="fas fa-briefcase text-2xl text-neon-cyan"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-3 text-center">JobAI</h3>
+              <p class="text-text-light mb-6 text-center text-sm">
+                AI-powered job search and matching platform.
+              </p>
+              <div class="text-center">
+                <a
+                  href="https://jobai57.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-secondary text-sm py-2 px-4"
+                >
+                  Visit Site <i class="fas fa-external-link-alt ml-2"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div
+              class="glassmorphism-card card-hover p-8 rounded-xl relative overflow-hidden group"
+            >
+              <div
+                class="absolute top-0 right-0 bg-neon-cyan text-dark-bg text-xs font-bold px-3 py-1 rounded-bl-lg"
+              >
+                LIVE
+              </div>
+              <div
+                class="bg-neon-cyan bg-opacity-20 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300"
+              >
+                <i class="fas fa-graduation-cap text-2xl text-neon-cyan"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-3 text-center">
+                Placement Prep App
+              </h3>
+              <p class="text-text-light mb-6 text-center text-sm">
+                Prepare for placements with curated resources and tests.
+              </p>
+              <div class="text-center">
+                <a
+                  href="https://placement-prep-app.netlify.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-secondary text-sm py-2 px-4"
+                >
+                  Visit Site <i class="fas fa-external-link-alt ml-2"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div
+              class="glassmorphism-card card-hover p-8 rounded-xl relative overflow-hidden group"
+            >
+              <div
+                class="absolute top-0 right-0 bg-neon-cyan text-dark-bg text-xs font-bold px-3 py-1 rounded-bl-lg"
+              >
+                LIVE
+              </div>
+              <div
+                class="bg-neon-cyan bg-opacity-20 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300"
+              >
+                <i class="fas fa-database text-2xl text-neon-cyan"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-3 text-center">SQL Agent</h3>
+              <p class="text-text-light mb-6 text-center text-sm">
+                Intelligent SQL query generation and optimization tool.
+              </p>
+              <div class="text-center">
+                <a
+                  href="https://sql-agent-gauc.onrender.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-secondary text-sm py-2 px-4"
+                >
+                  Visit Site <i class="fas fa-external-link-alt ml-2"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div
+              class="glassmorphism-card card-hover p-8 rounded-xl relative overflow-hidden group"
+            >
+              <div
+                class="absolute top-0 right-0 bg-neon-cyan text-dark-bg text-xs font-bold px-3 py-1 rounded-bl-lg"
+              >
+                LIVE
+              </div>
+              <div
+                class="bg-neon-cyan bg-opacity-20 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300"
+              >
+                <i class="fas fa-flask text-2xl text-neon-cyan"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-3 text-center">Devz Lab</h3>
+              <p class="text-text-light mb-6 text-center text-sm">
+                Developers Portfolio website of Garudan project.
+              </p>
+              <div class="text-center">
+                <a
+                  href="https://devz-lab.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-secondary text-sm py-2 px-4"
+                >
+                  Visit Site <i class="fas fa-external-link-alt ml-2"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Project 6 -->
+            <div
+              class="glassmorphism-card card-hover p-8 rounded-xl relative overflow-hidden group"
+            >
+              <div
+                class="absolute top-0 right-0 bg-neon-cyan text-dark-bg text-xs font-bold px-3 py-1 rounded-bl-lg"
+              >
+                LIVE
+              </div>
+              <div
+                class="bg-neon-cyan bg-opacity-20 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300"
+              >
+                <i class="fas fa-fire text-2xl text-neon-cyan"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-3 text-center">Fenix 2k25</h3>
+              <p class="text-text-light mb-6 text-center text-sm">
+                Event website for Fenix 2k25 CSE symposium.
+              </p>
+              <div class="text-center">
+                <a
+                  href="https://fenix2k25cse.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-secondary text-sm py-2 px-4"
+                >
+                  Visit Site <i class="fas fa-external-link-alt ml-2"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Project 7 -->
+            <div
+              class="glassmorphism-card card-hover p-8 rounded-xl relative overflow-hidden group"
+            >
+              <div
+                class="absolute top-0 right-0 bg-neon-cyan text-dark-bg text-xs font-bold px-3 py-1 rounded-bl-lg"
+              >
+                LIVE
+              </div>
+              <div
+                class="bg-neon-cyan bg-opacity-20 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300"
+              >
+                <i class="fas fa-play-circle text-2xl text-neon-cyan"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-3 text-center">Stream 2 Next</h3>
+              <p class="text-text-light mb-6 text-center text-sm">
+                Platform to convert Streamlit projects to Next.js.
+              </p>
+              <div class="text-center">
+                <a
+                  href="https://stream-2-next.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-secondary text-sm py-2 px-4"
+                >
+                  Visit Site <i class="fas fa-external-link-alt ml-2"></i>
+                </a>
+              </div>
+            </div>
+
+            
+            <!-- More Projects Placeholder -->
+             <div
+              class="glassmorphism-card card-hover p-8 rounded-xl relative overflow-hidden group flex flex-col items-center justify-center border-dashed border-2 border-neon-cyan border-opacity-30"
+            >
+              <div
+                class="bg-neon-cyan bg-opacity-10 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300"
+              >
+                <i class="fas fa-plus text-2xl text-neon-cyan"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-2 text-center text-neon-cyan">More Projects</h3>
+              <p class="text-text-light text-center text-sm">
+                Coming Soon...
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Certifications Section -->
+      <section id="certifications" class="py-16 px-6">
+        <div class="container mx-auto">
+          <h2 class="text-3xl font-bold text-center mb-12 gradient-text">
+            Certifications & Courses
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Certification 1 -->
+            <div
+              class="glassmorphism-card card-hover p-8 rounded-xl relative overflow-hidden"
+            >
+              <div
+                class="bg-neon-cyan bg-opacity-20 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6"
+              >
+                <i class="fas fa-microchip text-2xl text-neon-cyan"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-3">
+                AI-ML Development Certificate
+              </h3>
+              <p class="text-text-light mb-4">
+                Projects included Lane Detection, Heat Wave Alert System, and
+                Plant Leaf Disease Detection.
+              </p>
+              <div class="flex justify-between items-center">
+                <span class="text-sm text-neon-cyan font-medium"
+                  >Next24tech | Aug 2024</span
+                >
+                <a
+                  href="https://www.linkedin.com/in/ashifnavheed57/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-white hover:text-neon-cyan transition duration-300"
+                >
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Certification 2 -->
+            <div
+              class="glassmorphism-card card-hover p-8 rounded-xl relative overflow-hidden"
+            >
+              <div
+                class="bg-neon-cyan bg-opacity-20 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6"
+              >
+                <i class="fas fa-code text-2xl text-neon-cyan"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-3">
+                Django Development Certificate
+              </h3>
+              <p class="text-text-light mb-4">
+                Hands-on project work with authentication, CRUD, environment
+                setup, and backend logic.
+              </p>
+              <div class="flex justify-between items-center">
+                <span class="text-sm text-neon-cyan font-medium"
+                  >HCL GUVI | June 2024</span
+                >
+                <a
+                  href="https://www.guvi.in/share-certificate/59q06S49JQ14t75w07"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-white hover:text-neon-cyan transition duration-300"
+                >
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Certification 3 -->
+            <div
+              class="glassmorphism-card card-hover p-8 rounded-xl relative overflow-hidden"
+            >
+              <div
+                class="bg-neon-cyan bg-opacity-20 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6"
+              >
+                <i class="fas fa-brain text-2xl text-neon-cyan"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-3">Generative AI Applications</h3>
+              <p class="text-text-light mb-4">
+                Built RAG-based AI apps with LLMs and Python. Focused on
+                practical Generative AI integration.
+              </p>
+              <div class="flex justify-between items-center">
+                <span class="text-sm text-neon-cyan font-medium"
+                  >HCL GUVI | June 2025</span
+                >
+                <a
+                  href="https://www.guvi.in/share-certificate/1W6YsJnV8709t52L11"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-white hover:text-neon-cyan transition duration-300"
+                >
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- View All Certifications Button -->
+        <div class="text-center mt-12">
+          <a
+            href="https://www.linkedin.com/in/ashifnavheed57/details/certifications/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-primary inline-block"
+          >
+            View All Certifications <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+      </section>
+      <!-- Experience Section -->
+      <section id="experience" class="py-16 px-6">
+        <div class="container mx-auto">
+          <h2 class="text-3xl font-bold text-center mb-12 gradient-text">
+            Experience
+          </h2>
+          <div
+            class="glassmorphism-card p-8 rounded-xl relative overflow-hidden mb-8"
+          >
+            <div class="flex justify-between items-start">
+              <div>
+                <h3 class="text-xl font-bold">
+                  Full Stack Developer - Project "Garuden"
+                </h3>
+                <p class="text-neon-cyan font-medium">Trichy City Police</p>
+              </div>
+            </div>
+            <ul class="list-disc list-inside text-text-light space-y-2 mt-4">
+              <li>
+                Architected and deployed "Garuden," a full-stack digital case
+                management system to modernize criminal records for law
+                enforcement.
+              </li>
+              <li>
+                Built a secure, role-based platform using React, Django, and
+                PostgreSQL, deployed on DigitalOcean with a CI/CD pipeline via
+                GitHub Actions.
+              </li>
+              <li>
+                Implemented core features including JWT-based authentication
+                with 2FA, data visualization dashboards, PDF report generation,
+                and cloud storage integration.
+              </li>
+              <li>
+                Resolved critical data integrity bugs and enhanced the UI/UX,
+                significantly improving application stability and usability for
+                the Trichy City Police.
+              </li>
+            </ul>
+          </div>
+          <div
+            class="glassmorphism-card p-8 rounded-xl relative overflow-hidden"
+          >
+            <div class="flex justify-between items-start">
+              <div>
+                <h3 class="text-xl font-bold">Full Stack Development Intern</h3>
+                <p class="text-neon-cyan font-medium">
+                  VDart Technologies Pvt Ltd
+                </p>
+                <p class="text-sm text-text-light mt-1">
+                  [July 7, 2025 – Present]
+                </p>
+              </div>
+              <a href="#" class="btn-secondary">Credential Link</a>
+            </div>
+            <ul class="list-disc list-inside text-text-light space-y-2 mt-4">
+              <li>
+                Developed and contributed to diverse projects, including a Hall
+                Booking System, an R&R (Rewards & Recognition) platform, and a
+                Quiz Management tool.
+              </li>
+              <li>
+                Engineered full-stack solutions using Django (backend) and React
+                with Tailwind CSS (frontend), utilizing Supabase for backend
+                services.
+              </li>
+              <li>
+                Managed the deployment of applications, with frontends on
+                Netlify and backend services on Render, ensuring seamless
+                integration and delivery.
+              </li>
+              <li>
+                Strengthened practical skills in MVC architecture, modern
+                frontend frameworks, and cloud-based deployment workflows.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" class="py-16 px-6">
+        <div class="container mx-auto">
+          <h2 class="text-3xl font-bold text-center mb-12 gradient-text">
+            Featured Projects
+          </h2>
+
+          <!-- Carousel Wrapper -->
+          <div class="swiper mySwiper" id="projects-container">
+            <div class="swiper-wrapper">
+              <!-- Projects will be dynamically inserted here -->
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next">
+              <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="swiper-button-prev">
+              <i class="fas fa-chevron-left"></i>
+            </div>
+          </div>
+          <div class="text-center mt-12">
+            <a
+              href="https://github.com/ashif57?tab=repositories"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-primary inline-block"
+            >
+              View All Projects <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="py-16 px-6">
+        <div class="container mx-auto">
+          <h2 class="text-3xl font-bold text-center mb-12 gradient-text">
+            Get In Touch
+          </h2>
+          <div class="flex flex-col lg:flex-row gap-12">
+            <div class="lg:w-1/2">
+              <form
+                id="contact-form"
+                action="https://formsubmit.co/fcf1da2427cbf39e408046ce9baa229f"
+                method="POST"
+                class="space-y-6 glassmorphism-card p-8 rounded-xl"
+              >
+                <!-- Hidden fields -->
+                <input type="hidden" name="_captcha" value="false" />
+                <input
+                  type="hidden"
+                  name="_subject"
+                  value="New message from Portfolio Contact Form!"
+                />
+                <input type="hidden" name="_template" value="box" />
+
+                <div>
+                  <label
+                    for="name"
+                    class="block mb-2 font-medium text-text-light"
+                    >Your Name</label
+                  >
+                  <input
+                    type="text"
+                    name="name"
+                    required
+                    class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-10 border border-neon-violet focus:outline-none focus:ring-2 focus:ring-neon-cyan transition duration-300 text-text-light placeholder-gray-400"
+                    placeholder="John Doe"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="email"
+                    class="block mb-2 font-medium text-text-light"
+                    >Email Address</label
+                  >
+                  <input
+                    type="email"
+                    name="email"
+                    required
+                    class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-10 border border-neon-violet focus:outline-none focus:ring-2 focus:ring-neon-cyan transition duration-300 text-text-light placeholder-gray-400"
+                    placeholder="john@example.com"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="message"
+                    class="block mb-2 font-medium text-text-light"
+                    >Your Message</label
+                  >
+                  <textarea
+                    name="message"
+                    rows="5"
+                    required
+                    class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-10 border border-neon-violet focus:outline-none focus:ring-2 focus:ring-neon-cyan transition duration-300 text-text-light placeholder-gray-400"
+                    placeholder="Hello Ashif..."
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn-secondary w-full">
+                  Send Message <i class="fas fa-paper-plane ml-2"></i>
+                </button>
+                <div id="form-status" class="mt-4 text-center"></div>
+              </form>
+            </div>
+            <div class="lg:w-1/2 flex flex-col justify-center">
+              <div class="mb-8">
+                <h3 class="text-xl font-bold mb-4 text-neon-cyan">
+                  Let's Connect
+                </h3>
+                <p class="mb-6 text-text-light">
+                  I'm always open to discussing new projects, creative ideas or
+                  opportunities to be part of your vision.
+                </p>
+                <div class="flex space-x-6">
+                  <a
+                    href="https://github.com/ashif57"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="social-icon text-2xl transition duration-300 text-text-light hover:text-neon-cyan"
+                  >
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/ashifnavheed57/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="social-icon text-2xl transition duration-300 text-text-light hover:text-neon-cyan"
+                  >
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                  <a
+                    href="mailto:ashifnavheed@gmail.com"
+                    class="social-icon text-2xl transition duration-300 text-text-light hover:text-neon-cyan"
+                  >
+                    <i class="fas fa-envelope"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="glassmorphism-card p-6 rounded-lg">
+                <h3 class="text-xl font-bold mb-4 text-neon-cyan">
+                  Current Availability
+                </h3>
+                <p class="mb-4 text-text-light">
+                  I'm currently looking for full-time or freelance opportunities
+                  in backend development and AI/ML engineering.
+                </p>
+                <p class="text-text-light">
+                  If you have a project that needs my expertise, don't hesitate
+                  to reach out!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <!-- Footer -->
     <footer class="text-text-light py-8 px-6 mt-auto">
-        <div class="container mx-auto">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <p class="mb-4 md:mb-0">Made by Ashif<span class="text-red-500">❤️</span></p>
-                <div class="flex space-x-6">
-                    <a href="#" class="text-sm hover:text-neon-cyan transition duration-300">Privacy Policy</a>
-                    <a href="#" class="text-sm hover:text-neon-cyan transition duration-300">Terms of Service</a>
-                    <a href="#" class="text-sm hover:text-neon-cyan transition duration-300">Sitemap</a>
-                </div>
-            </div>
-            <div class="border-t border-gray-700 mt-6 pt-6 text-center text-sm text-gray-400">
-                <p>© 2025 Ashif. All rights reserved.</p>
-            </div>
+      <div class="container mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <p class="mb-4 md:mb-0">
+            Made by Ashif<span class="text-red-500">❤️</span>
+          </p>
+          <div class="flex space-x-6">
+            <a
+              href="#"
+              class="text-sm hover:text-neon-cyan transition duration-300"
+              >Privacy Policy</a
+            >
+            <a
+              href="#"
+              class="text-sm hover:text-neon-cyan transition duration-300"
+              >Terms of Service</a
+            >
+            <a
+              href="#"
+              class="text-sm hover:text-neon-cyan transition duration-300"
+              >Sitemap</a
+            >
+          </div>
         </div>
+        <div
+          class="border-t border-gray-700 mt-6 pt-6 text-center text-sm text-gray-400"
+        >
+          <p>© 2025 Ashif. All rights reserved.</p>
+        </div>
+      </div>
     </footer>
 
     <!-- Back to Top Button -->
-    <button id="back-to-top" class="fixed bottom-8 right-8 bg-neon-cyan text-dark-bg w-12 h-12 rounded-full shadow-lg flex items-center justify-center transition duration-300 opacity-0 invisible z-50">
-        <i class="fas fa-arrow-up"></i>
+    <button
+      id="back-to-top"
+      class="fixed bottom-8 right-8 bg-neon-cyan text-dark-bg w-12 h-12 rounded-full shadow-lg flex items-center justify-center transition duration-300 opacity-0 invisible z-50"
+    >
+      <i class="fas fa-arrow-up"></i>
     </button>
 
     <script>
-        // Mobile menu toggle
-        document.getElementById('menu-toggle').addEventListener('click', function() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
+      // Mobile menu toggle
+      document
+        .getElementById("menu-toggle")
+        .addEventListener("click", function () {
+          const menu = document.getElementById("mobile-menu");
+          menu.classList.toggle("hidden");
         });
 
-        // Navbar scroll effect
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add('bg-dark-bg', 'bg-opacity-80', 'backdrop-blur-lg', 'shadow-lg');
-            } else {
-                navbar.classList.remove('bg-dark-bg', 'bg-opacity-80', 'backdrop-blur-lg', 'shadow-lg');
-            }
-        });
+      // Navbar scroll effect
+      const navbar = document.getElementById("navbar");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+          navbar.classList.add(
+            "bg-dark-bg",
+            "bg-opacity-80",
+            "backdrop-blur-lg",
+            "shadow-lg"
+          );
+        } else {
+          navbar.classList.remove(
+            "bg-dark-bg",
+            "bg-opacity-80",
+            "backdrop-blur-lg",
+            "shadow-lg"
+          );
+        }
+      });
 
-        // Back to top button
-        const backToTopButton = document.getElementById('back-to-top');
-        
-        window.addEventListener('scroll', function() {
-            if (window.pageYOffset > 300) {
-                backToTopButton.classList.remove('opacity-0', 'invisible');
-                backToTopButton.classList.add('opacity-100', 'visible');
-            } else {
-                backToTopButton.classList.remove('opacity-100', 'visible');
-                backToTopButton.classList.add('opacity-0', 'invisible');
-            }
-        });
+      // Back to top button
+      const backToTopButton = document.getElementById("back-to-top");
 
-        backToTopButton.addEventListener('click', function() {
+      window.addEventListener("scroll", function () {
+        if (window.pageYOffset > 300) {
+          backToTopButton.classList.remove("opacity-0", "invisible");
+          backToTopButton.classList.add("opacity-100", "visible");
+        } else {
+          backToTopButton.classList.remove("opacity-100", "visible");
+          backToTopButton.classList.add("opacity-0", "invisible");
+        }
+      });
+
+      backToTopButton.addEventListener("click", function () {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute("href");
+          const targetElement = document.querySelector(targetId);
+
+          if (targetElement) {
             window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
+              top: targetElement.offsetTop - 80,
+              behavior: "smooth",
             });
-        });
 
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                    
-                    // Close mobile menu if open
-                    const mobileMenu = document.getElementById('mobile-menu');
-                    if (!mobileMenu.classList.contains('hidden')) {
-                        mobileMenu.classList.add('hidden');
-                    }
-                }
-            });
+            // Close mobile menu if open
+            const mobileMenu = document.getElementById("mobile-menu");
+            if (!mobileMenu.classList.contains("hidden")) {
+              mobileMenu.classList.add("hidden");
+            }
+          }
         });
+      });
     </script>
-</body>
+  </body>
 </html>
 <script>
-    // Starfield generation
-    document.addEventListener('DOMContentLoaded', () => {
-        const starfield = document.querySelector('.starfield');
-        if (starfield && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-            const numStars = 300;
-            for (let i = 0; i < numStars; i++) {
-                let star = document.createElement('div');
-                star.className = 'star';
-                star.style.left = `${Math.random() * 100}%`;
-                star.style.top = `${Math.random() * 100}%`;
-                star.style.width = `${Math.random() * 2 + 1}px`;
-                star.style.height = star.style.width;
-                star.style.animationDuration = `${Math.random() * 3 + 1}s`;
-                star.style.animationDelay = `${Math.random() * 2}s`;
-                starfield.appendChild(star);
-            }
-        }
+  // Starfield generation
+  document.addEventListener("DOMContentLoaded", () => {
+    const starfield = document.querySelector(".starfield");
+    if (
+      starfield &&
+      !window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    ) {
+      const numStars = 300;
+      for (let i = 0; i < numStars; i++) {
+        let star = document.createElement("div");
+        star.className = "star";
+        star.style.left = `${Math.random() * 100}%`;
+        star.style.top = `${Math.random() * 100}%`;
+        star.style.width = `${Math.random() * 2 + 1}px`;
+        star.style.height = star.style.width;
+        star.style.animationDuration = `${Math.random() * 3 + 1}s`;
+        star.style.animationDelay = `${Math.random() * 2}s`;
+        starfield.appendChild(star);
+      }
+    }
 
-        // Parallax effect for starfield
-        window.addEventListener('scroll', () => {
-            if (starfield) {
-                const scrollY = window.scrollY;
-                starfield.style.transform = `translateY(${scrollY * 0.5}px)`;
-            }
-        });
-
-        // 3D tilt effect for cards and hero image
-        document.querySelectorAll('.glassmorphism-card, .glow-border').forEach(element => {
-            element.addEventListener('mousemove', (e) => {
-                const rect = element.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-                const centerX = rect.width / 2;
-                const centerY = rect.height / 2;
-                const rotateX = (y - centerY) / 20; // Adjust for desired tilt
-                const rotateY = (centerX - x) / 20; // Adjust for desired tilt
-
-                element.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;
-                if (element.classList.contains('glassmorphism-card')) {
-                    element.style.boxShadow = `0 15px 30px rgba(0, 0, 0, 0.2), 0 0 20px var(--neon-cyan)`;
-                }
-            });
-
-            element.addEventListener('mouseleave', () => {
-                element.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg)`;
-                if (element.classList.contains('glassmorphism-card')) {
-                    element.style.boxShadow = `0 4px 30px rgba(0, 0, 0, 0.1)`;
-                }
-            });
-        });
-
-        // Magnetic button effect
-        document.querySelectorAll('.magnetic-btn').forEach(button => {
-            button.addEventListener('mousemove', (e) => {
-                const rect = button.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-                const centerX = rect.width / 2;
-                const centerY = rect.height / 2;
-                const moveX = (x - centerX) * 0.1; // Adjust for desired magnetic strength
-                const moveY = (y - centerY) * 0.1; // Adjust for desired magnetic strength
-
-                button.style.transform = `translate(${moveX}px, ${moveY}px)`;
-            });
-
-            button.addEventListener('mouseleave', () => {
-                button.style.transform = `translate(0px, 0px)`;
-            });
-        });
-
-        // Smooth scroll-reveal animations (using Intersection Observer)
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in-up');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('section, .glassmorphism-card, .btn-primary, .btn-secondary').forEach(el => {
-            el.classList.add('fade-in-hidden'); // Add initial hidden state
-            observer.observe(el);
-        });
+    // Parallax effect for starfield
+    window.addEventListener("scroll", () => {
+      if (starfield) {
+        const scrollY = window.scrollY;
+        starfield.style.transform = `translateY(${scrollY * 0.5}px)`;
+      }
     });
+
+    // 3D tilt effect for cards and hero image
+    document
+      .querySelectorAll(".glassmorphism-card, .glow-border")
+      .forEach((element) => {
+        element.addEventListener("mousemove", (e) => {
+          const rect = element.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          const centerX = rect.width / 2;
+          const centerY = rect.height / 2;
+          const rotateX = (y - centerY) / 20; // Adjust for desired tilt
+          const rotateY = (centerX - x) / 20; // Adjust for desired tilt
+
+          element.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;
+          if (element.classList.contains("glassmorphism-card")) {
+            element.style.boxShadow = `0 15px 30px rgba(0, 0, 0, 0.2), 0 0 20px var(--neon-cyan)`;
+          }
+        });
+
+        element.addEventListener("mouseleave", () => {
+          element.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg)`;
+          if (element.classList.contains("glassmorphism-card")) {
+            element.style.boxShadow = `0 4px 30px rgba(0, 0, 0, 0.1)`;
+          }
+        });
+      });
+
+    // Magnetic button effect
+    document.querySelectorAll(".magnetic-btn").forEach((button) => {
+      button.addEventListener("mousemove", (e) => {
+        const rect = button.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        const moveX = (x - centerX) * 0.1; // Adjust for desired magnetic strength
+        const moveY = (y - centerY) * 0.1; // Adjust for desired magnetic strength
+
+        button.style.transform = `translate(${moveX}px, ${moveY}px)`;
+      });
+
+      button.addEventListener("mouseleave", () => {
+        button.style.transform = `translate(0px, 0px)`;
+      });
+    });
+
+    // Smooth scroll-reveal animations (using Intersection Observer)
+    const observerOptions = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.1,
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("fade-in-up");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    document
+      .querySelectorAll(
+        "section, .glassmorphism-card, .btn-primary, .btn-secondary"
+      )
+      .forEach((el) => {
+        el.classList.add("fade-in-hidden"); // Add initial hidden state
+        observer.observe(el);
+      });
+  });
 </script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="projects.js"></script>
 <script>
-    // Theme toggle
-    const themeToggle = document.getElementById('theme-toggle');
-    const body = document.body;
-    const themeIcon = themeToggle.querySelector('i');
+  // Theme toggle
+  const themeToggle = document.getElementById("theme-toggle");
+  const body = document.body;
+  const themeIcon = themeToggle.querySelector("i");
 
-    // Set dark theme as the default on every page load
-    body.classList.remove('light-theme');
-    themeIcon.classList.remove('fa-moon');
-    themeIcon.classList.add('fa-sun');
-    localStorage.setItem('theme', 'dark-theme');
+  // Set dark theme as the default on every page load
+  body.classList.remove("light-theme");
+  themeIcon.classList.remove("fa-moon");
+  themeIcon.classList.add("fa-sun");
+  localStorage.setItem("theme", "dark-theme");
 
-    themeToggle.addEventListener('click', () => {
-        body.classList.toggle('light-theme');
-        const currentTheme = body.classList.contains('light-theme') ? 'light-theme' : 'dark-theme';
-        localStorage.setItem('theme', currentTheme);
+  themeToggle.addEventListener("click", () => {
+    body.classList.toggle("light-theme");
+    const currentTheme = body.classList.contains("light-theme")
+      ? "light-theme"
+      : "dark-theme";
+    localStorage.setItem("theme", currentTheme);
 
-        if (currentTheme === 'light-theme') {
-            themeIcon.classList.remove('fa-sun');
-            themeIcon.classList.add('fa-moon');
-        } else {
-            themeIcon.classList.remove('fa-moon');
-            themeIcon.classList.add('fa-sun');
-        }
-    });
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-        const formStatus = document.getElementById('form-status');
-
-        contactForm.addEventListener('submit', async (e) => {
-            e.preventDefault();
-
-            const formData = new FormData(contactForm);
-            const action = contactForm.getAttribute('action');
-
-            formStatus.innerHTML = '<p class="text-text-light">Sending...</p>';
-
-            try {
-                const response = await fetch(action, {
-                    method: 'POST',
-                    body: formData,
-                    headers: {
-                        'Accept': 'application/json'
-                    }
-                });
-
-                if (response.ok) {
-                    formStatus.innerHTML = '<p class="text-green-500">Your message has been sent successfully!</p>';
-                    contactForm.reset();
-                    setTimeout(() => formStatus.innerHTML = '', 5000);
-                } else {
-                    response.json().then(data => {
-                        if (Object.hasOwn(data, 'errors')) {
-                            formStatus.innerHTML = `<p class="text-red-500">${data["errors"].map(error => error["message"]).join(", ")}</p>`
-                        } else {
-                            formStatus.innerHTML = '<p class="text-red-500">Oops! There was a problem submitting your form.</p>';
-                        }
-                    })
-                }
-            } catch (error) {
-                formStatus.innerHTML = '<p class="text-red-500">Oops! There was a problem submitting your form.</p>';
-            }
-        });
+    if (currentTheme === "light-theme") {
+      themeIcon.classList.remove("fa-sun");
+      themeIcon.classList.add("fa-moon");
+    } else {
+      themeIcon.classList.remove("fa-moon");
+      themeIcon.classList.add("fa-sun");
     }
+  });
+  const contactForm = document.getElementById("contact-form");
+  if (contactForm) {
+    const formStatus = document.getElementById("form-status");
+
+    contactForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const formData = new FormData(contactForm);
+      const action = contactForm.getAttribute("action");
+
+      formStatus.innerHTML = '<p class="text-text-light">Sending...</p>';
+
+      try {
+        const response = await fetch(action, {
+          method: "POST",
+          body: formData,
+          headers: {
+            Accept: "application/json",
+          },
+        });
+
+        if (response.ok) {
+          formStatus.innerHTML =
+            '<p class="text-green-500">Your message has been sent successfully!</p>';
+          contactForm.reset();
+          setTimeout(() => (formStatus.innerHTML = ""), 5000);
+        } else {
+          response.json().then((data) => {
+            if (Object.hasOwn(data, "errors")) {
+              formStatus.innerHTML = `<p class="text-red-500">${data["errors"]
+                .map((error) => error["message"])
+                .join(", ")}</p>`;
+            } else {
+              formStatus.innerHTML =
+                '<p class="text-red-500">Oops! There was a problem submitting your form.</p>';
+            }
+          });
+        }
+      } catch (error) {
+        formStatus.innerHTML =
+          '<p class="text-red-500">Oops! There was a problem submitting your form.</p>';
+      }
+    });
+  }
 </script>
