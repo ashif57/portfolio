@@ -474,8 +474,8 @@ body.light-theme .swiper-pagination-bullet-active {
   align-items: center;
   font-size: 2rem;
   color: var(--neon-cyan);
-  transform: rotate(calc(360deg / 13 * var(--i))) translateX(200px)
-    rotate(calc(-360deg / 13 * var(--i)));
+  transform: rotate(calc(360deg / 14 * var(--i))) translateX(200px)
+    rotate(calc(-360deg / 14 * var(--i)));
   animation: float 5s ease-in-out infinite;
   animation-delay: calc(var(--i) * 0.5s);
   box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
@@ -517,11 +517,11 @@ body.light-theme .swiper-pagination-bullet-active {
 @keyframes float {
   0%,
   100% {
-    transform: rotate(calc(360deg / 13 * var(--i))) translateX(200px)
-      rotate(calc(-360deg / 13 * var(--i))) translateY(0px);
+    transform: rotate(calc(360deg / 14 * var(--i))) translateX(200px)
+      rotate(calc(-360deg / 14 * var(--i))) translateY(0px);
   }
   50% {
-    transform: rotate(calc(360deg / 13 * var(--i))) translateX(200px) rotate(calc(-360deg / 13 * var(--i))) translateY(-15px);
+    transform: rotate(calc(360deg / 14 * var(--i))) translateX(200px) rotate(calc(-360deg / 14 * var(--i))) translateY(-15px);
   }
 }
 
@@ -615,19 +615,19 @@ body.light-theme textarea::placeholder {
     width: 60px;
     height: 60px;
     font-size: 1.5rem;
-    transform: rotate(calc(360deg / 13 * var(--i))) translateX(150px)
-      rotate(calc(-360deg / 13 * var(--i)));
+    transform: rotate(calc(360deg / 14 * var(--i))) translateX(150px)
+      rotate(calc(-360deg / 14 * var(--i)));
   }
 
   @keyframes float {
     0%,
     100% {
-      transform: rotate(calc(360deg / 13 * var(--i))) translateX(150px)
-        rotate(calc(-360deg / 13 * var(--i))) translateY(0px);
+      transform: rotate(calc(360deg / 14 * var(--i))) translateX(150px)
+        rotate(calc(-360deg / 14 * var(--i))) translateY(0px);
     }
     50% {
-      transform: rotate(calc(360deg / 13 * var(--i))) translateX(150px)
-        rotate(calc(-360deg / 13 * var(--i))) translateY(-10px);
+      transform: rotate(calc(360deg / 14 * var(--i))) translateX(150px)
+        rotate(calc(-360deg / 14 * var(--i))) translateY(-10px);
     }
   }
 
@@ -656,19 +656,19 @@ body.light-theme textarea::placeholder {
     width: 50px;
     height: 50px;
     font-size: 1.2rem;
-    transform: rotate(calc(360deg / 13 * var(--i))) translateX(125px)
-      rotate(calc(-360deg / 13 * var(--i)));
+    transform: rotate(calc(360deg / 14 * var(--i))) translateX(125px)
+      rotate(calc(-360deg / 14 * var(--i)));
   }
 
   @keyframes float {
     0%,
     100% {
-      transform: rotate(calc(360deg / 13 * var(--i))) translateX(125px)
-        rotate(calc(-360deg / 13 * var(--i))) translateY(0px);
+      transform: rotate(calc(360deg / 14 * var(--i))) translateX(125px)
+        rotate(calc(-360deg / 14 * var(--i))) translateY(0px);
     }
     50% {
-      transform: rotate(calc(360deg / 13 * var(--i))) translateX(125px)
-        rotate(calc(-360deg / 13 * var(--i))) translateY(-8px);
+      transform: rotate(calc(360deg / 14 * var(--i))) translateX(125px)
+        rotate(calc(-360deg / 14 * var(--i))) translateY(-8px);
     }
   }
 
